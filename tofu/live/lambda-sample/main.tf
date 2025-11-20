@@ -3,8 +3,7 @@ provider "aws" {
 }
 
 module "function" {
-  source  = "2025-fall-devops/devops/book//modules/lambda"
-  version = "1.0.0"
+  source  = "git::https://github.com/2025-fall-devops/devops-book//ch3/tofu/modules/lambda"
 
   name        = "lambda-sample"      
   src_dir     = "${path.module}/src" 
